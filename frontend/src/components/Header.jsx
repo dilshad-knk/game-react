@@ -15,12 +15,12 @@ const Header = () => {
       </div>
       <div className='text-center p-4 font-bold bg-green-500 text-white shadow-lg'>
         Highest Score:
-        {highestScore === 0
-          ? 'No score'
-          : `${highestScore} moves`
-        }
+        {highestScore === Infinity 
+          ? 'No record yet'
+          : highestScore === null || highestScore === 0
+            ? 'No score'
+            : `${highestScore} moves`}
       </div>
-    
     </div>
   );
 };
