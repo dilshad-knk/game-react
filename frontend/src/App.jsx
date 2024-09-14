@@ -4,6 +4,7 @@ import instance from './axios/axios';
 import Header from './components/Header';
 import { useRecoilState } from 'recoil';
 import { userState } from './atoms';
+import Logout from './components/Logout';
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
       });
      
     } catch (error) {
+      localStorage.removeItem('token');
       console.log(error);
       
     }
@@ -36,6 +38,7 @@ const App = () => {
     <>
     <Header/>
     <MemoryGame/>
+    <Logout/>
     
     </>
   )
