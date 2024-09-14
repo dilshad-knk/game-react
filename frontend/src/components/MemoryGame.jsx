@@ -127,7 +127,7 @@ const MemoryGame = () => {
           {cards.map((symbol, index) => (
             <div
               key={index}
-              className={`card h-16 rounded-lg shadow-lg text-4xl cursor-pointer flex items-center justify-center transition-all duration-300 ${
+              className={`card  hover:ring-4 ring-yellow-600 h-16 rounded-lg shadow-lg text-4xl cursor-pointer flex items-center justify-center transition-all duration-300 ${
                 flippedCards.includes(index) || matchedCards.includes(index) ? 'bg-white' : 'bg-gray-300'
               } ${gameWon ? 'pointer-events-none' : ''}`}
               onClick={() => handleCardClick(index)}

@@ -8,16 +8,12 @@ const Logout = () => {
     const setUser = useSetRecoilState(userState);
 
     const handleLogout = async() => {
+        localStorage.removeItem('token');
+        setUser({});
+        window.location.href = '/login'; 
         await instance.post('/api/v1/logout');
           
-        
-        setUser({});
-        
        
-        localStorage.removeItem('token');
-        
-       
-        window.location.href = '/login'; 
       }
   return (
     <div className='text-center mt-4'>
