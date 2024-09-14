@@ -14,7 +14,7 @@ connectDb();
 
 app.use(cors({
     credentials: true ,
-    origin: "https://memory-test-game3.vercel.app"
+    origin: true,
 }));
 
 

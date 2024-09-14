@@ -138,7 +138,7 @@ const MemoryGame = () => {
         </div>
       )}
 
-      <div className='pt-10 text-center text-2xl text-red-700 '>
+      <div className='text-center text-2xl bg-red-900 m-10 py-4 text-white'>
         Moves : {moves}
       </div>
     </div>
